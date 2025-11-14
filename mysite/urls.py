@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('helloworld.urls')),
     path('blog/', include('blog.urls')),
     path('forms/', include('djangoforms.urls')),
+    path('register/', include('registerform.urls')),
 ]

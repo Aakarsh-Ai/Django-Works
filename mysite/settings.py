@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'helloworld.apps.HelloworldConfig',
     'blog.apps.BlogConfig',
     'djangoforms.apps.DjangoformsConfig',
+    'registerform.apps.RegisterformConfig',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+LOGIN_REDIRECT_URL='/blog/personalblog/'
+LOGOUT_REDIRECT_URL='/login/'
 
 ROOT_URLCONF = 'mysite.urls'
 

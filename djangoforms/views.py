@@ -10,6 +10,6 @@ def contact_view(request):
             print(f"Received message from {contact.name} ({contact.email}): {contact.message}")
             return render(request, 'forms/success.html', {'name': name})
     else:
-        form = ContactForm()
+        form = ContactForm()  
     return render(request, 'forms/contact.html', {'form': form})
 
