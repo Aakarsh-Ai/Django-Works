@@ -52,7 +52,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-LOGIN_REDIRECT_URL='/blog/personalblog/'
+#LOGIN_REDIRECT_URL='/blog/personalblog/'
+LOGIN_REDIRECT_URL = 'user_blog'
 LOGOUT_REDIRECT_URL='/login/'
 
 ROOT_URLCONF = 'mysite.urls'

@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404, render
-
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 from django.http import HttpResponse
 from blog.models import Post
@@ -27,4 +27,9 @@ def render_about_template(request):
 def post_by_author(request, name):
     post = get_object_or_404(Post, author=name)
     return render(request, 'blog/post_det.html', {'post': post})
-
+def user_blog(request):
+    user=request.user
+    context={
+        'user':user
+    }
+    return render(request, 'blog/user_blog.html', context)

@@ -9,6 +9,7 @@ urlpatterns=[
     path('personalblog/',views.render_index_template,name='indextemplate'),
     path('personalblog/<int:post_id>/',views.post_detail,name='post_detail_template'),
     path('personalblog/about/',views.render_about_template,name='abouttemplate'),
-    path('author/<str:name>/', views.post_by_author, name='post_by_author')
+    path('author/<str:name>/', views.post_by_author, name='post_by_author'),
+    path('myblog/', views.user_blog, name='user_blog'),
 ]
 
